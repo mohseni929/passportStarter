@@ -1,0 +1,13 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome Admin</p>
+<ul>
+    <% for(var i=0; i < sessions.length; i++) { %>
+        <li>
+            Session Id : <%=sessions[i].key%>
+            <br/>
+            User Id : <%=sessions[i].value.passport.user%> 
+            <br/>
+            <a href="/revoke/<%=sessions[i].value.passport.user%>">revoke</a>
+        </li>  
+     <% } %> 
+</ul>
